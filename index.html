@@ -229,7 +229,14 @@
   </section>
 
   <!--==================================== Go to Top Button ====================================-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(window).scroll(function() {
+    if (($(window).scrollTop() + $(window).height()) >= ($(document).height() - 10)) {
+      $('#goToTopBtn').css('bottom', '80px');
+    } else {
+      $('#goToTopBtn').css('bottom', '10px');
+    }
+  });</script>
 
   <button id="goToTopBtn">Go to Top</button>
   
