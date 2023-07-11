@@ -33,7 +33,8 @@ $(document).ready(function() {
       scrollTop: 0
     }, 800); // Adjust the animation speed as desired
   });
- $(window).scroll(function() {
+
+ $(document).scroll(function() {
   if (($(window).scrollTop() + $(window).height()) >= ($(document).height() - 10)) {
     $('#goToTopBtn').css('bottom', '80px'); // Change the bottom CSS value to 80px
   } else {
