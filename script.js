@@ -25,12 +25,6 @@ $(document).ready(function() {
       $('#goToTopBtn').fadeOut();
     }
 
-  if (($(window).scrollTop() + $(window).height()) >= $(document).height()) {
-    $('#goToTopBtn').css('bottom', '80px'); // Change the bottom CSS value to 80px
-  } else {
-    $('#goToTopBtn').css('bottom', '10px'); // Reset the bottom CSS value to 10px
-  }
-
   });
 
   // Scroll to top when the button is clicked
@@ -39,6 +33,13 @@ $(document).ready(function() {
       scrollTop: 0
     }, 800); // Adjust the animation speed as desired
   });
+ $(window).scroll(function() {
+  if (($(window).scrollTop() + $(window).height()) >= ($(document).height() - 10)) {
+    $('#goToTopBtn').css('bottom', '80px'); // Change the bottom CSS value to 80px
+  } else {
+    $('#goToTopBtn').css('bottom', '10px'); // Reset the bottom CSS value to 10px
+  }
+});
 
 
 
