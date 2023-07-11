@@ -181,7 +181,7 @@ fade {
   
   .event-container h2 {
     font-size: 24px;
-    color: rgb(56,128,135);
+    color: rgb(35, 78, 82);
     margin-bottom: 10px;
   }
   
@@ -228,7 +228,7 @@ fade {
 
 .gallery h1 {
     margin-top: 40px;    
-    color: rgb(12, 26, 49);
+    color: rgb(56,128,135);
     font-size: 32px;
     margin-bottom: 20px;
 }
@@ -236,7 +236,7 @@ fade {
 .gallery h2 {
     font-size: 24px;
     margin-bottom: 10px;
-    color:  rgb(13, 23, 48);
+    color:  rgb(53, 135, 151);
 }
 
 .box {
