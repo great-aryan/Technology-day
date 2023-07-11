@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--=================================== Tab Icon ======================================-->
+  <link rel="shortcut icon" href="assets/" type="image/x-icon"> 
+
+  <!--===================================== CSS =========================================-->
+  <link rel="stylesheet" href="styles.css">
+
+  <!--====================================== JS =========================================-->
+  <script src="https://kit.fontawesome.com/fc50fdfc1d.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <!--=====================================Title=========================================-->  
+  <title>Technology Day</title>
+</head>
+<body>
+
+  <!--====================================== HEADER =====================================-->
+  <header class="header" id="header">
+    <div>
+      <nav class="nav">
+        <input type="checkbox" id="check">              
+        <label for="check" class="checkbtn">                   
+            <i class="fa-solid fa-bars" style="color: rgb(0, 0, 0);"></i>
+        </label>
+        <label class="logo">National Technology Day</label>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#event">Events</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#organisers">Organisers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!--===================================== HOME =========================================-->
+  <section class="home" id="home">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="assets/slider/bg1.jpg" style="width:100%">
+      </div>
+      <div class="mySlides fade">
+        <img src="assets/slider/bg2.jpg" style="width:100%">
+      </div>            
+      <div class="mySlides fade">
+        <img src="assets/slider/bg3.jpg" style="width:100%">
+      </div>     
+    </div> 
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+  </section> 
+
+  <!--================================== About Us ========================================-->
+
+  <section id="about" class="about">
+    <h1>National Technology Day</h1>
+    <div>
+      <p class="paragraph">
+       We have celebrated National Technology Day to recognize the achievements
+       of scientists, engineers, and technologists who have made significant contributions to the 
+       development of new technologies that have positively impacted our lives. As a part of this
+       celebration, we have organized a series of tech events, including the BIT Challenge,BGMI 
+       Tournament, and Code Crafters to leverage the technical skills of individuals and promote
+       innovation.
+     </p>
+    </div>
+  </section> 
+
+  <!--================================== Event ========================================-->
+  <div id="event" class="event-container">
+    <h1>Events</h1>
+  
+    <div class="day-container">
+      <h2>Day 1 - 09/MAY/2023</h2>
+  
+      <div class="event-box">
+        <h3 class="event-name">BIT CHALLENGE</h3>
+        <p class="event-description">
+          The BIT Challenge is a technical competition that focuses on problem-solving and innovation in various domains, such as artificial intelligence, machine learning, cybersecurity, and blockchain. Participants can compete individually or in teams, and the winners can receive cash prizes or other rewards.
+        </p>
+      </div>
+  
+      <div class="event-box">
+        <h3 class="event-name">BGMI TOURNAMENT</h3>
+        <h4 class="event-subtitle">ROUND 1 - ONLINE</h4>
+        <p class="event-description">
+          The BGMI Tournament is a gaming event that can attract a large audience and can be played on various platforms, such as mobile, PC, or console. The tournament can be structured as an elimination round or a league format, and the winners can receive cash prizes or other gaming-related rewards.
+        </p>
+      </div>
+    </div>
+  
+    <div class="day-container">
+      <h2>Day 2 - 10/MAY/2023</h2>
+  
+      <div class="event-box">
+        <h3 class="event-name">BGMI TOURNAMENT</h3>
+        <h4 class="event-subtitle">SEMI-FINALS &amp; FINAL - OFFLINE</h4>
+        <p class="event-description">
+          The BGMI Tournament is a gaming event that can attract a large audience and can be played on various platforms, such as mobile, PC, or console. The tournament can be structured as an elimination round or a league format, and the winners can receive cash prizes or other gaming-related rewards.
+        </p>
+      </div>
+  
+      <div class="event-box">
+        <h3 class="event-name">CODE CRAFTERS (OFFLINE)</h3>
+        <p class="event-description">
+          Code Crafters is an event that focuses on software development and coding. Participants can compete individually or in teams and can be given various challenges to develop software applications, websites, or other technological solutions. The winners can receive cash prizes or other rewards and can also have an opportunity to showcase their projects to potential employers or investors.
+        </p>
+      </div>
+    </div>
+  
+    <div class="day-container">
+      <h2>Day 3 - 11/MAY/2023</h2>
+  
+      <div class="event-box">
+        <h3 class="event-name">TECHNOLOGY DAY CELEBRATION</h3>
+        <p class="event-description">
+          The event will include a Technical Talk by the Lead Coordinator of Techno Cultural Club and Alumni, followed by the recognition of all the Winners of various Technical Events organized by Techno Cultural Club and Core Team Members of Techno Cultural Club. We will conclude our event with an Entertainment Night.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!--===================================== Gallery =========================================-->
+  <section id="gallery" class="gallery">    
+    <h1>Gallery</h1>
+    <h2>Speakers and Guests</h2>
+    <div class="box">
+      <div class="slidebox15"> 
+        <!--Total images = 15 (12-portrait & 3-Landscape )-->       
+        <script>
+          for (var i = 1; i <= 12; i++) {
+            document.write('<div class="slideimage"><img src="assets/gallery/speaker/'+ i +'.jpg" alt="" height="400" width="300" ></div>' );
+          }
+          for (var i = 13; i <= 15; i++) {
+            document.write('<div class="slideimage"><img src="assets/gallery/speaker/'+ i +'.jpg" alt="" height="400" width="500" ></div>');
+          }
+        </script>        
+      </div>
+    </div>
+    <h2>Prizes</h2>
+    <div class="box 2">
+      <div class="slidebox30">
+        <!--Total images = 30 (13-portrait & 17-Landscape )-->
+        <script>          
+          for (var i = 200; i <= 217; i++) {
+            document.write('<div class="slideimage"><img src="assets/gallery/prize/'+ i +'.jpg" alt="" width="400" height="300"></div>');
+          }
+          for (var i = 100; i <= 113; i++) { 
+            document.write('<div class="slideimage"><img src="assets/gallery/prize/'+ i +'.jpg" alt="" width="300" height="400"></div>');
+          }
+        </script>        
+      </div>
+    </div>
+  </section>
+
+  <!--===================================== Organisers =========================================-->
+  <section id="organisers" class="organisers">
+    <h1>ORGANIZERS</h1>
+    <section class="container">
+      <div class="card">
+        <div class="card_image car_1"></div>
+          <h3>NAVAID RIZVI SIR</h3>
+          <p>GBU's Techno Cultural Club is a remarkable community of talented individuals.
+              Proud to be the faculty coordinator of such a phenomenal team.
+          </p>
+          <a href="" class="acard">Join Us!</a>
+        </div>
+        <div class="card">
+          <div class="card_image car_2"></div>
+          <h3>ANUSHKA S.</h3>
+          <p> I am honored to serve as the Secretary of TCC. Together, let's foster a vibrant 
+            blend of technology and culture through exciting events and initiatives.</p>
+          <a href="" class="acard">Join Us!</a>
+        </div>
+        <div class="card">
+          <div class="card_image car_3"></div>
+          <h3>NIKHIL M.</h3>
+          <p>Hello, I am Nikhil Mishra, the Secretary of TCC. I am committed to promoting technology 
+            and culture through engaging events and initiatives.</p>
+          <a href="" class="acard">Join Us!</a>
+        </div>
+        <div class="card">
+          <div class="card_image car_4"></div>
+          <h3>SHARAD</h3>
+          <p>I am the president of ARCADIA e-sports, a student-run esports organization at GBU, 
+            passionate about gaming and growing the Indian esports community.</p>
+          <a href="" class="acard">Join Us!</a>
+        </div>
+    </section>
+  </section>
+
+  <!--===================================== Footer ============================================-->
+  <section id="footer" class="footer">
+    <footer class="footer">
+      <div class="contain">
+          <div class="row">
+              <div class="footer-col">
+                  <h4>Company</h4>
+                  <ul>
+                     <li><a class="#home" href="">Home</a></li>
+                      <li><a href="#about">About</a></li>
+                      <li><a href="#events">Event</a></li>
+                      <li><a href="#gallery">Gallery</a></li>
+                      <li><a href="#organisers">Organisers</a></li>
+                  </ul>
+              </div>
+             
+              <div class="footer-col">
+                  <h4>Follow us</h4>
+                  <div class="social-links">
+                      <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+                      <a href="https://www.instagram.com"><i class="fa fa-instagram"></i></a>
+                      <a href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
+                      <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://www.youtube.com/"><i class="fa fa-youtube"></i></a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  </section>
+
+  <!--==================================== Go to Top Button ====================================-->
+  <button id="goToTopBtn">Go to Top</button>
+    
+</body>
+</html>
