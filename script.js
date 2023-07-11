@@ -1,9 +1,8 @@
 // script.js
 
 /////////////////JavaScript/jQuery to add smooth scrolling functionality////////////////////////////////
-
-
 $(document).ready(function() {
+
   $('a[href^="#"]').on('click', function(event) {
     event.preventDefault();
 
@@ -14,12 +13,11 @@ $(document).ready(function() {
       }, 800); // Adjust the animation speed as desired
     }
   });
-});
-
+ 
 
 
 ///////////////////////// Show/hide the button based on scroll position//////////////////////////////
-$(document).ready(function() { 
+
   $(window).scroll(function() {
     if ($(this).scrollTop() > 100) {
       $('#goToTopBtn').fadeIn();
@@ -34,13 +32,13 @@ $(document).ready(function() {
       scrollTop: 0
     }, 800); // Adjust the animation speed as desired
   });
-});
 
 
 
 
-///////////////////////////////////////// Slider functionality///////////////////////////////////////
-$(document).ready(function() {
+
+///////////////////////////////////////// Image Slider Home///////////////////////////////////////
+
   let slideIndex = 0;
   showSlides();
 
@@ -62,6 +60,50 @@ $(document).ready(function() {
     dots[slideIndex - 1].className += " active";
     setTimeout(showSlides, 3000); // Change image every 2 seconds
   }
+
+  ///////////////////////////////////////// Auto Hide Nav menu///////////////////////////////////////
+  var links = document.querySelectorAll('.nav a');
+  var checkbox = document.getElementById('menu-toggle');
+  
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function() {
+      checkbox.checked = false;
+    });
+  }
+
+///////////////////////////////////////// Auto Hide Nav menu///////////////////////////////////////
+
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleButton = document.querySelector('.toggle-button');
+  var headerHeight = document.querySelector('.header').offsetHeight;
+  var content = document.getElementById('content');
+
+  toggleButton.addEventListener('click', function() {
+    if (content) {
+      content.style.paddingTop = headerHeight + 'px';
+    }
+  });
+
+  var menuItems = document.querySelectorAll('.menu a');
+
+  menuItems.forEach(function(item) {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = item.getAttribute('href').substring(1);
+      var targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        var offset = targetElement.offsetTop - headerHeight;
+        window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
+
 
   
 });

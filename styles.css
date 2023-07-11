@@ -7,7 +7,8 @@
     box-sizing: border-box;
 }
 body {  
-    background-color: rgb(254,254,253);
+    
+    background-color: rgb(246,246,242);
     font-family: system-ui, -apple-system, 
     BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans',
@@ -15,15 +16,26 @@ body {
 }
 
 
+
 /*============================== NAV =========================*/ 
+.header {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    height: 80px;
+    width: 100%;
+    z-index: 999;
+  }
 nav {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     position: fixed;
     align-items: center;
-    background-color: rgba(233, 233, 22, 0.5);
-    backdrop-filter: blur(20px);
+    background-color: rgba(243, 243, 238, 0.726);
     height: 80px;
     width: 100%;
     z-index: 999;
@@ -32,8 +44,8 @@ label.logo {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 5%;
-    color: rgb(0, 0, 0);
-    font-size: 40px;    
+    color: rgb(56,128,135);
+    font-size: 35px;    
     position: absolute;
     font-weight: bold;
 }
@@ -47,8 +59,9 @@ nav ul li {
     margin: 0 5px;
 }
 nav ul li a {
-    color: rgb(31, 31, 31);
+    color: rgb(56,128,135);
     font-size: 17px;
+    font-weight: bold;
     text-transform: uppercase;
     padding: 7px 13px;
     border-radius: 3px;
@@ -61,6 +74,7 @@ nav a:hover {
     background: goldenrod;
     transition: .5s;
 }
+
 .checkbtn {
     font-size: 20px;
     color: rgb(0, 0, 0);
@@ -70,7 +84,7 @@ nav a:hover {
     cursor: pointer;
     display: none;
 }
-#check {
+#menu-toggle {
     display: none;
 }
 
@@ -80,7 +94,7 @@ nav a:hover {
 }
 .slideshow-container {
   max-width: 70%;
-  padding-top: 5%;
+  padding-top: 80px;
   margin: auto;
 }
 *{
@@ -144,21 +158,20 @@ fade {
   }
 
 /*=================== EVENTS ==================*/
-.event {
-    
-}
+
 .event-container {
     font-family: Arial, sans-serif;
     max-width: 70%;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #f3ec85;
-    border-radius: 5px;
+    background-color: rgb(214, 240, 221);
+    border-radius: 20px;
   }
   
   .event-container h1 {
     text-align: center;
-    color: #333;    
+      
+    color: rgb(45, 71, 52);
     margin-bottom: 30px;
   }
   
@@ -166,14 +179,14 @@ fade {
     margin-bottom: 40px;
   }
   
-  h2 {
+  .event-container h2 {
     font-size: 24px;
-    color: #555;
+    color: rgb(56,128,135);
     margin-bottom: 10px;
   }
   
   .event-box {
-    background-color: #fffce1;
+    background-color: rgb(255, 255, 255);
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 20px;
@@ -182,7 +195,7 @@ fade {
   
   .event-name {
     font-size: 20px;
-    color: #333;
+    color: rgb(68, 120, 124);
     margin-bottom: 10px;
   }
   
@@ -196,15 +209,36 @@ fade {
     font-size: 14px;
     color: #777;
     line-height: 1.5;
+    text-align: justify;
   }
   
   
   
-/*================== GALLERY =================*/
+/* ================== GALLERY ================= */
 
-.gallery {  
+.gallery {
     overflow: hidden;
+    text-align: center;
+    background-color: rgb(224, 238, 241);
+    max-width: 70%;    
+    margin: 20px auto;    
+    border-radius: 20px;
+    
 }
+
+.gallery h1 {
+    margin-top: 40px;    
+    color: rgb(12, 26, 49);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.gallery h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color:  rgb(13, 23, 48);
+}
+
 .box {
     display: flex;
     justify-content: center;
@@ -213,70 +247,76 @@ fade {
     scrollbar-width: none;
     -ms-overflow-style: none;
     overflow: hidden;
-}  
-  .box::-webkit-scrollbar {
+    margin-bottom: 30px;
+}
+
+.box::-webkit-scrollbar {
     display: none;
-}  
+}
+
 .slidebox15 {
     display: flex;
     animation: scroll15 45s linear infinite;
-} 
+}
+
 .slidebox30 {
     display: flex;
     animation: scroll30 90s linear infinite;
-}  
-  .slideimage {
+}
+
+.slideimage {
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 20px;
     perspective: 100px;
     flex-shrink: 0;
-}  
-  .slideimage img {
+    z-index: 99;
+}
+
+.slideimage img {
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.3s;
+    z-index: 99;
 }
-  img {
-    transition: transform 0.5s;
-}  
-  img:hover {
-    transform: translateZ(10px);
+
+.slideimage img:hover {
+    transform: translateZ(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
-@keyframes 
-  scroll15 {
-    0%{
+
+@keyframes scroll15 {
+    0% {
         transform: translate(0);
     }
-  
-    5%{
+
+    5% {
         transform: translate(0);
     }
-    99%  { 
-        transform: translateX(calc(-300px*12 + -400px *3));
+    99% {
+        transform: translateX(calc(-300px * 12 + -400px * 3));
     }
-    100%
-    {
+    100% {
         transform: translateX(0);
     }
-    
 }
-@keyframes 
-  scroll30 {
-    0%{
+
+@keyframes scroll30 {
+    0% {
         transform: translate(0);
     }
-  
-    5%{
+
+    5% {
         transform: translate(0);
     }
-    99%  { 
-        transform: translateX(calc(-300px*17 + -400px *14));
+    99% {
+        transform: translateX(calc(-300px * 17 + -400px * 14));
     }
-    100%
-    {
+    100% {
         transform: translateX(0);
     }
-    
 }
 
 
@@ -293,7 +333,7 @@ fade {
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #ce3131;
+  color: rgb(56,128,135);
   text-align: center;
 }
 .container {
@@ -337,13 +377,16 @@ fade {
 .card h2 {
       text-align: center;
 }
+.card h3 {
+    text-align: center;
+}
 .card p {
-      text-align: center;
-      padding: 9px;
+      text-align: justify;
+      padding: 15px;
 }
 .container a {
-      background-color: goldenrod;
-      color: black;
+      background-color: rgb(56,128,135);
+      color: rgb(255, 255, 255);
       font-weight: bold;
       text-align: center;
       padding: 10px 20px;
@@ -352,11 +395,11 @@ fade {
 }
 .card:hover {
       transform: scale(1.03);
-      transition: all 2s ease;
+      transition: all 0.5s ease;
 }
 .container a:hover {
-      background-color: black;
-      color: goldenrod;
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
       cursor: pointer;
 }
 
@@ -367,7 +410,7 @@ fade {
 {
     background-color: rgb(235, 235, 235);
     color: rgb(0, 0, 0);
-    padding: 70px 0;
+    padding: 50px 0;
 
 }
 .footer i
@@ -383,10 +426,12 @@ fade {
 {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 .footer-col
 {
-    width: 25%;
+    width: 30%;
     padding: 0 15px;
 }
 .footer-col h4
@@ -402,11 +447,10 @@ fade {
     content: '';
     position: absolute;
     left:0;
-    bottom: -10;
     background-color: goldenrod;
     height: 2px;
     box-sizing: border-box;
-    width: 50px;
+    width: 90px;
 }
 .footer-col ul li:not(:last-child)
 {
@@ -430,7 +474,7 @@ fade {
     display: inline-block;
     height: 40px;
     width: 40px;
-    background-color: #4a4a4a;
+    background-color: #d1d1d1;
     margin:0 7px 7px 0;
     text-align: center;
     line-height: 40px;
@@ -465,10 +509,12 @@ fade {
     cursor: pointer;
 }
 
+
+
 /*======================================================== MEDIA QUERIES ==========================================*/
 
 
-@media (max-width : 1050px)  /*============================ 1050px ====*/
+@media (max-width : 1200px)  /*============================ 1050px ====*/
 {
     /*========== NAV ==============*/
     nav ul{
@@ -503,7 +549,7 @@ fade {
     .checkbtn {
         display: block;
     }
-    #check:checked ~ ul {
+    #menu-toggle:checked ~ ul {
         left: 0;
     }  
 }
@@ -529,8 +575,12 @@ fade {
     
     }
 
+    label.logo {
+        font-size: 28px;
+    }
+
     /*=========== ABOUT =============*/
-    h1
+    .about h1
     {
         text-align: center;
         font-size: 30px;
@@ -549,9 +599,34 @@ fade {
 @media (max-width : 860px) /*=============================== 860px ====*/
 {
     /*============ NAV ==============*/
+    label.logo {
+        font-size: 22px;
+    }
 
     /*=========== ABOUT =============*/
-
+    .about {
+        font-family: Arial, sans-serif;
+        max-width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 5px;
+      }
+      
+      .about h1 {
+        font-size: 25px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+        text-align: center;
+      }
+      
+      .about .paragraph {
+        font-size: 18px;
+        line-height: 1.5;
+        color: #555;
+        text-align: justify;
+      }
     /*=========== EVENTS ============*/
 
     /*=========== GALLERY ===========*/
@@ -563,16 +638,107 @@ fade {
 
 }
 
-@media (max-width : 480px) /*=============================== 480px ====*/
+@media (max-width : 500px) /*=============================== 480px ====*/
 {
+    label.logo {
+        font-size: 20px;
+    }
+    .checkbtn {
+        margin-top: 30px;
+        margin-right: 20px;
+    }
    /*=========== ABOUT =============*/
-   
+   .about {
+    max-width: 90%;
+    padding: 20px;
+  }
+  
+  .about h1 {
+    font-size: 23px;
+    margin-bottom: 17px;
+  }
+  
+  .about .paragraph {
+    font-size: 15px;
+  }
    
    /*=========== EVENTS ============*/
-   
+   .event-container {
+    max-width: 90%;
+    border-radius: 15px;
+  }
+  
+  .event-container h1 {
+    margin-bottom: 25px;
+  }
+  
+  .event-container h2 {
+    font-size: 20px;
+  }
+  
+  .event-box {
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .event-name {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  
+  .event-subtitle {
+    font-size: 14px;
+  }
+  
+  .event-description {
+    font-size: 13px;
+  }
    
    /*=========== GALLERY ===========*/
-  
+  .gallery {
+    max-width: 90%;    
+    
+}
+
+.gallery h1 {
+    margin-top: 40px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.gallery h2 {
+    font-size: 20px;
+}
+
+.box {
+
+    margin-bottom: 0px;
+}
+
+
+.slideimage {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    perspective: 100px;
+    flex-shrink: 0;
+    
+}
+
+.slideimage img {
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.slideimage img:hover {
+    transform: translateZ(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
   
    /*========= ORGANANISER =========*/
    
