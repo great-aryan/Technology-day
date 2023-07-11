@@ -24,11 +24,13 @@ $(document).ready(function() {
     } else {
       $('#goToTopBtn').fadeOut();
     }
-if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-    $('#goToTopBtn').css('bottom', '80px');
+
+  if (($(window).scrollTop() + $(window).height()) >= $(document).height()) {
+    $('#goToTopBtn').css('bottom', '80px'); // Change the bottom CSS value to 80px
   } else {
-    $('#goToTopBtn').css('bottom', '10px');
+    $('#goToTopBtn').css('bottom', '10px'); // Reset the bottom CSS value to 10px
   }
+
   });
 
   // Scroll to top when the button is clicked
