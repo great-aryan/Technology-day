@@ -1,6 +1,9 @@
 // script.js
 
 $(document).ready(function() {
+$(window).on('scroll', function() {
+    updateGoToTopBtnPosition();
+  });
   function updateGoToTopBtnPosition() {
     if ($(window).scrollTop() > 100) {
       $('#goToTopBtn').fadeIn();
@@ -15,10 +18,7 @@ $(document).ready(function() {
     }
   }
 
-  $(window).on('scroll', function() {
-    updateGoToTopBtnPosition();
-  });
-
+  
   // Scroll to top when the button is clicked
   $('#goToTopBtn').click(function() {
     $('html, body').animate({
