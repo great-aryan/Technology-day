@@ -59,9 +59,8 @@ nav ul li {
     margin: 0 5px;
 }
 nav ul li a {
-    color: rgb(56,128,135);
-    font-size: 17px;
-    font-weight: bold;
+    color: rgb(16, 48, 51);
+    font-size: 18px;
     text-transform: uppercase;
     padding: 7px 13px;
     border-radius: 3px;
@@ -320,88 +319,97 @@ fade {
 }
 
 
-/*================ ORGANANISER ===============*/
+/* ================== ORGANIZER ================= */
+
 .organisers {
-    padding: 40px;
     background-color: #f9f9f9;
-    margin: 20px 0 20px 0;
-    letter-spacing: 2px;
-    color: white;
-    padding: 15px;
-}
-.organisers h1 {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: rgb(56,128,135);
-  text-align: center;
-}
-.container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      border-radius: 10px;
-      margin: 20px;
-      justify-content: center;
-      padding: 20px;
-}
-.card {
-      background-color: rgb(28, 28, 28);
-      width: 270px;
-      color: white;
-      margin: 10px;
-      border-radius: 15px;
-}
-.card_image {
-      background-color: rgb(255, 255, 255);
-      height: 200px;
-      margin-bottom: 15px;
-      border-radius: 15px 15px 0 0;
-}
-.car_1 {
-      background-image: url(assets/organisers/rizvi-sir.jpg);
-      background-size: cover;
-}
-.car_2 {
-      background-image: url(assets/organisers/anushkai.jpg);
-      background-size: cover;
-}
-.car_3 {
-      background-image: url(assets/organisers/nikhil.jpg);
-      background-size: cover;
-}
-.car_4 {
-      background-image: url(assets/organisers/sharad.jpg);
-      background-size: cover;
-}
-.card h2 {
-      text-align: center;
-}
-.card h3 {
+    padding: 40px;
+    margin: 20px 0;
     text-align: center;
-}
-.card p {
-      text-align: justify;
-      padding: 15px;
-}
-.container a {
-      background-color: rgb(56,128,135);
-      color: rgb(255, 255, 255);
-      font-weight: bold;
-      text-align: center;
-      padding: 10px 20px;
-      display: block;
-      border-radius: 0 0 15px 15px ;
-}
-.card:hover {
-      transform: scale(1.03);
-      transition: all 0.5s ease;
-}
-.container a:hover {
-      background-color: rgb(255, 255, 255);
-      color: rgb(0, 0, 0);
-      cursor: pointer;
-}
+  }
+  
+  .organisers h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #388087;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: #1c1c1c;
+    width: 270px;
+    color: white;
+    margin: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card_image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 200px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .car_1 {
+    background-image: url(assets/organisers/rizvi-sir.jpg);
+  }
+  
+  .car_2 {
+    background-image: url(assets/organisers/anushkai.jpg);
+  }
+  
+  .car_3 {
+    background-image: url(assets/organisers/nikhil.jpg);
+  }
+  
+  .car_4 {
+    background-image: url(assets/organisers/sharad.jpg);
+  }
+  
+  .card h3 {
+    text-align: center;
+    margin-bottom: auto;
+  }
+  
+  .card p {
+    text-align: justify;
+    padding: 0px 15px 15px 15px;
+    margin: auto;
+  }
+  
+  .container a {
+    background-color: #388087;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 20px;
+    display: block;
+    border-radius: 0 0 15px 15px;
+    text-decoration: none;
+  }
+  
+  .card:hover {
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+  }
+  
+  .container a:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+  }
+  
 
 
 /*================== FOOTER ==================*/
@@ -576,7 +584,7 @@ fade {
     }
 
     label.logo {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     /*=========== ABOUT =============*/
@@ -592,7 +600,36 @@ fade {
 
     /*========= ORGANANISER =========*/
 
-
+    .organisers {
+        margin: 5px;
+       padding: 10px;
+      }
+       .organisers h1 {
+        font-size: 28px;
+      }
+      .container{
+        gap: 5px;
+      }
+      
+      
+      .card {
+        width: 27%; /* Adjust the card width to fit the viewport */
+        height: auto; /* Allow the card height to adjust based on content */
+      }
+    
+      .card_image {
+        height: 160px; /* Reset the card image height for smaller screens */
+      }
+    
+      .card h3 {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+        padding: 1px;
+        margin: auto;
+      }
+      .card p {
+        font-size: 14px;
+        padding: 5px;
+      }
     /*=========== FOOTER ===========*/
 }
 
@@ -600,7 +637,7 @@ fade {
 {
     /*============ NAV ==============*/
     label.logo {
-        font-size: 22px;
+        font-size: 25px;
     }
 
     /*=========== ABOUT =============*/
@@ -633,7 +670,12 @@ fade {
 
     /*========= ORGANANISER =========*/
 
-
+    .card {
+        width: 35%; /* Adjust the card width to fit the viewport */
+      }
+      .card_image {
+        height: 200px; /* Reset the card image height for smaller screens */
+      }
     /*=========== FOOTER ===========*/
 
 }
@@ -743,6 +785,35 @@ fade {
    /*========= ORGANANISER =========*/
    
    
+   .organisers {
+    margin: 5px;
+   padding: 10px;
+  }
+   .organisers h1 {
+    font-size: 28px;
+  }
+  .container{
+    gap: 5px;
+  }
+  
+  .card p {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .card {
+    width: 40%; /* Adjust the card width to fit the viewport */
+    height: auto; /* Allow the card height to adjust based on content */
+  }
+
+  .card_image {
+    height: 160px; /* Reset the card image height for smaller screens */
+  }
+
+  .card h3 {
+    font-size: 11px; /* Adjust the font size for smaller screens */
+    padding: 1px;
+    margin: 0px;
+  }
    /*=========== FOOTER ===========*/
 
 
