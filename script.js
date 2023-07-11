@@ -24,6 +24,11 @@ $(document).ready(function() {
     } else {
       $('#goToTopBtn').fadeOut();
     }
+if ($(window).scrollTop() + $(window).height() == $(document).height()) {
+    $('#goToTopBtn').css('bottom', '80px');
+  } else {
+    $('#goToTopBtn').css('bottom', '10px');
+  }
   });
 
   // Scroll to top when the button is clicked
